@@ -1,0 +1,59 @@
+:root {
+  --home-panel-size-x: 36.25vw;
+  --home-panel-size-x-half: 18.125vw;
+  --home-panel-size-y: 36.25vw;
+  --home-panel-size-y-half: 18.125vw;
+  --nav-text-main-font-size: 11.5rem;
+  --nav-text-sub-font-size: 2.7rem;
+  --nav-pie-size: 13.25rem;
+  --nav-pie-inner-size: 11.5rem;
+  --nav-font-size: 5.4rem;
+  --nf-ttl-main-font-size: 34.6rem;
+  --nf-ttl-sub-font-size: 7.2rem;
+  --nf-back-font-size: 2.7rem;
+}
+
+html {
+  font-size: .625vw;
+}
+
+@media screen and (max-width: 1279px) {
+  html {
+    font-size: .67vw;
+  }
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+#scene-container {
+  /* tell our scene container to take up the full page */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /*
+    Set the container's background color to the same as the scene's
+    background to prevent flashing on load
+  */
+  background-color: transparent;
+}
+
+@import 'components/carousel';
