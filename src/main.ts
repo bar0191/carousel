@@ -2,6 +2,11 @@ import './styles/main.scss';
 import Carousel from './Carousel/Carousel';
 import World from './World/World';
 
+function animate(world): void {
+  world.render();
+  requestAnimationFrame(animate);
+}
+
 // create the main function
 async function main() {
   // Get a reference to the container element
@@ -16,6 +21,8 @@ async function main() {
     const world = new World(canvas, container);
 
     await world.init();
+
+    animate(world);
   }
 }
 
